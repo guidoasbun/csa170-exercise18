@@ -1,11 +1,11 @@
-
-
 public class ArraysAndLoops {
     public static void main(String[] args) {
+        //1. Declare and init arr1
         int[] arr1 = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        //2. Declare arr2
         int[] arr2 = new int[9];
-        int index = 0;
 
+        //3. Use for loop to print arr1 separated by commas
         System.out.print("Array 1: ");
         for(int i = 0; i < arr1.length; i++){
             if(i > 0)
@@ -14,7 +14,9 @@ public class ArraysAndLoops {
         }
         System.out.println();
 
+        //4. Use while loop to print arr2 separated by dashes
         System.out.print("Array 2: ");
+        int index = 0;
         while(index < arr2.length){
             if(index > 0)
                 System.out.print("-");
@@ -23,12 +25,14 @@ public class ArraysAndLoops {
         }
         System.out.println();
 
+        //5. Use for loop to copy arr1 to arr2 in reverse order
         int j = arr1.length-1;
         for(int i = 0; i < arr2.length; i++){
             arr2[i] = arr1[j];
             j--;
         }
 
+        //6. Use do/while loop to print arr1 separated by comma
         System.out.print("Array 1: ");
         int index2 = 0;
         do {
@@ -39,13 +43,12 @@ public class ArraysAndLoops {
         } while (index2 < arr1.length);
         System.out.println();
 
+        //7. Use for loop to print arr2 separated by dashes
         System.out.print("Array 2: ");
         for(int i = 0; i < arr1.length; i++){
             if(i > 0)
                 System.out.print(",");
             System.out.print(arr2[i]);
         }
-//        System.out.println(Arrays.toString(arr1));
-//        System.out.println(Arrays.toString(arr2));
     }
 }
